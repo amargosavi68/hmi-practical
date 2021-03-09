@@ -9,11 +9,12 @@ body {
      font-family: ubuntu, sans-serif;
 }
 
+
 header {
      display: flex;
      align-items: center;
      justify-content: center;
-     height: 60px;
+     height: 70px;
      width: 100%;
      background-color: #056605;
      color: white;
@@ -29,6 +30,7 @@ header {
      border-radius: 50%;  
      position: absolute;
      z-index: -1;
+     overflow: hidden;
 }
 
 .circle1 {
@@ -38,25 +40,26 @@ header {
 
 .circle2 {
      transform: rotate(-180deg);
-     left: 70%;
+     left: 55%;
      top: 70%;
 }
-
 
 section {
      display: flex;
      align-items: center;
      justify-content: center;
      place-content: space-around;
+     margin-top: 3rem;
+     width: 100%;
 }
 
 .left-panel {
      display: flex;
      flex-direction: column;
-     background-color: #f2f2f2;
+     background-color: #faf9f9;
      padding: 3rem 2rem ;
-     min-width: 45%;
      border-radius: 10px;
+     border: 1px solid black;
 }
 
 .image-panel {
@@ -71,6 +74,133 @@ section {
      place-content: space-between;
      margin: 3rem 0rem;
      padding: 2rem 1rem;
+}
+
+form {
+     padding: 2rem;
+     display: flex;
+     place-content: space-around;
+}
+
+input, button {
+     font-family: ubuntu, sans-serif;
+     height: 30px;
+     padding: 0.138rem;
+     font-size: larger;
+
+}
+
+input {
+     border: 1px solid #29eb29;
+     width: 60%;
+     box-shadow: 0px 0px 1px 1px #b8f5d3;
+}
+
+button {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: none;
+     padding: 20px;
+     width: 120px;
+     border-radius: 5px;
+     background-color: #39f38d;
+}
+
+button:hover {
+     transition: .5s;
+     background-color: #29eb29;
+     cursor: pointer;
+}
+
+
+.paginator {
+     text-align: right;
+     margin-right: 10%;
+     font-size: larger;
+}
+
+
+.right-panel {
+     display: flex;
+     position: relative;
+     flex-direction: column;
+     align-content: left;
+     justify-content: left;
+}
+
+
+.right-panel img {
+     height: 300px;
+     padding: 1rem;
+     margin: 0rem 1rem;
+     border-radius: 5%;
+     transform: translate(-100px, -45px);
+     
+}
+
+.score-card {
+     padding: 2rem;
+     background-color: #fdfdfd;
+     border-radius: 5%;
+     border: 1px solid black;
+}
+
+.score-card h2 {
+     text-align: center;
+     margin-bottom: 20px;
+     font-size: x-large;
+}
+
+.score-card p {
+     margin: 15px 0px;
+     font-size: larger;
+
+}
+
+.correct {
+     color: green;
+}
+.incorrect {
+     color: red;
+}
+
+/* Responsive design starts from here..*/
+@media screen and (max-width: 768px) {
+    section {
+         width: 95%;
+         flex-direction: column;
+         margin: 3px;
+         place-content: space-between;
+    }
+
+    .images-panel img {
+          margin: 1rem 0rem;
+          padding: 1rem 1rem;
+     }
+
+     form {
+          display: flex;
+          place-content: space-around;
+          flex-direction: column;
+          width: 100%;
+     }
+
+     input, button {
+          margin: 5px 0px;
+     }
+    .right-panel {
+         margin: 30px 0px ;
+    }
+    .right-panel img {
+         display: none;
+    }
+
+    .score-card {
+         transform: translateX(-85px);
+         width: 180%;
+    }
+
 }
 
 

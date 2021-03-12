@@ -5,3 +5,130 @@
      padding: 0;
 }
 
+body {
+     background-color: #fcf4f4;
+}
+
+header {
+     background-color: #77aef7;
+     display: flex;
+     place-content: space-between;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.site-name {
+     width: 100px;
+     padding: 10px;
+     font-weight: bolder;
+     font-size: 110%;
+     color: white;
+}
+
+.search-bar {
+     display: flex;
+     background-color: aliceblue;
+     margin: 10px;
+     border-radius: 5px;
+     place-content: space-between;
+
+}
+
+.search-bar input, button {
+     background: transparent;
+     border: none;
+     padding: 10px;
+     outline: none;
+     font-size: large;
+     backdrop-filter: blur;
+     opacity: 0.8;
+}
+
+.user-info {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 3px 10px;
+}
+
+.user-image {
+     height: 30px;
+     width: 30px;
+     font-size: 200%;
+     margin: 7px;
+}
+
+.user-image i {
+     border: 1px solid black;
+     border-radius: 50%;
+     padding: 2px 7px;
+}
+
+nav {
+     display: flex;
+     background-color: #5fdbc0;
+     font-size: large;
+     font-weight: 600;
+     padding-left: 30px;
+     font-family: Helvetica, sans-serif;
+}
+
+nav div {
+     margin: 0.5rem;
+     padding: 1px 5px;
+}
+
+nav div:hover, .user-info:hover, .search-bar button:hover {
+     cursor: pointer;
+}
+
+section {
+     padding: 2% 3%;
+}
+
+.products {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.products > div {
+     display: flex;
+     flex-direction: row;
+     place-content: space-evenly;
+}
+
+.products .product-card {
+     margin: 10px 2px;
+     background-color: #fff;
+}
+
+.products .product-card:hover {
+     cursor: pointer;
+     transition: .5s;
+     transform: scale(1.05);
+     box-shadow: 1px 1px 3px 1px rgb(231, 244, 245), -1px -1px 3px 1px rgb(240, 246, 247);
+}
+
+.products .product-card img {
+     height: 200px;
+     width: 200px;
+}
+
+.products .product-card .product-name {
+     text-align: center;
+     font-family: Helvetica, sans-serif;
+     padding: 5px;
+     border: 2px solid #9dc7fd;
+}
+
+.circle {
+     position: absolute;
+     height: 80%;
+     width: 60%;
+     z-index: -1;
+     background-color: #9dc7fd;
+     border-radius: 50%;
+     transform: translate(-30%, -40%);
+
+}

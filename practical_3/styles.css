@@ -4,3 +4,104 @@
      top: 0;
      left: 0;
 }
+
+body {
+     font-family: 'ubuntu-bold', verdana, sans-serif;
+     background-color: #36B1B1;
+}
+
+header {
+     background-color: #c4c4c4;
+     align-items: center;
+     text-align: center;
+     padding: 10px;
+     font-size: large;
+}
+
+.container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+}
+
+.container .instruction {
+     font-weight: bold;
+}
+
+.container .instruction p {
+     font-size: 30px;
+     line-height: 60px;
+     color: yellow;
+}
+
+.container .instruction img {
+     height: 300px;
+     width: 300px;
+     margin-top: 10px;
+}
+
+.container .instruction p.warning {
+     font-size: medium;
+     color: #DBFC5A
+}
+
+#show_banking_options {
+     display: flex;
+     flex-direction: column;
+     width: 70%;
+     margin: 50px;
+}
+
+#show_banking_options h2 {
+     color: yellow;
+     margin: 10px;
+}
+
+.btn-row {
+     display: flex;
+     flex-direction: row;
+     place-content: space-between;
+     margin: 30px 10px;
+     
+}
+
+.atm-btn {
+     width: 250px;
+     text-align: center;
+     font-size: large;
+     font-weight: 600;
+     padding: 3px 0px 6px 0px;
+     background-color: yellow;
+     outline: none;
+     border-radius: 10px;
+     margin: 10px 5px;
+}
+
+.atm-btn:hover {
+     cursor: pointer;
+}
+
+.atm-btn img {
+     height: 30px;
+     width: 30px;
+     padding: 7px 0px 0px 10px;
+     margin-right: 10px;
+}
+
+#withdraw_money {
+     width: 70%;
+}
+
+#withdraw_money div {
+     margin: 20px 0px;
+}
+
+
+@media screen and (max-width:768px) {
+     .container {
+          margin: 5px;
+          padding: 0px;
+     }
+}

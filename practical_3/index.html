@@ -4,10 +4,86 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="./styles.css">
      <title>ATM | Home</title>
-</head>
-<body>
+
+     <link rel="stylesheet" href="./styles.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
      
+     <script lang="text/javascript">
+
+          function showInstruction() {
+               setTimeout(() => {
+                    document.getElementById('instruction').hidden = 'True';
+                    //document.getElementById('show_banking_options').hidden = "False"
+                    document.getElementById('show_banking_options').style.visibility = 'visible';
+               }, 1000);
+               
+          }
+     </script>
+
+</head>
+<body onload="showInstruction()">
+     <header>
+          <h1>Welcome to ATM</h1>
+     </header>
+     <section class="container" hidden>
+          <div class="instruction" id="instruction">
+               <p>Please, Insert your ATM Card.</p>
+               <p class="warning"> <em>Note:</em> Please, do not remove ATM card until transaction is done.</p>
+               <img src="./images/insert-atm-card.jpg" alt="insert-atm-card">
+          </div>
+          <div id="show_banking_options" style="visibility: hidden;">
+               <div><h2>Select Banking Option</h2></div>
+               <div class="btn-row">
+                    <button class="atm-btn"><img src="./images/money-clipart.png" alt="keypad"> Withdraw Money</button>
+                    <button class="atm-btn"><img src="./images/keypad.png" alt="keypad"> Pin Generation</button>
+               </div>
+               <div class="btn-row">
+                    <button class="atm-btn"><img src="./images/bill.png" alt="keypad">  Mini Statement</button>
+                    <button class="atm-btn"><img src="./images/phone.png" alt="keypad"> Contact Bank</button>
+               </div>
+               <div class="btn-row">
+                    <button class="atm-btn"><img src="./images/amount.png" alt="keypad"> Available Balance</button>
+               </div>
+          </div>
+
+          <div id="withdraw_money">
+               <div>
+                    Enter your PIN *
+               </div>
+               <div>
+                    <input type="text" placeholder="Enter your PIN">
+               </div>
+               <div class="account-types">
+                    <button class="atm-btn">Current</button>
+                    <button class="atm-btn">Savings</button>
+
+               </div>
+          </div>
+
+          <div id="pin_generation">
+               
+          </div>
+
+          <div id="mini_statement">
+               
+          </div>
+
+          <div id="contact_bank">
+               
+          </div>
+
+          <div id="available_balance">
+
+          </div>
+
+          <div id="transaction_complete">
+               <div>
+                    <div><img src="./images/green-check.png" alt="green-check"></div>
+                    <div>Your Transaction is completed.. Please collect your card.</div>
+               </div>
+          </div>
+
+     </section>
 </body>
 </html>
